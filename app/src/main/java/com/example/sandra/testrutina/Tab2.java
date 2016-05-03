@@ -29,7 +29,10 @@ public class Tab2 extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_tab2, container, false);
         WebView browser = (WebView) rootView.findViewById(R.id.webview);
-        browser.loadUrl("https://calendar.google.com/calendar/htmlembed?src=v79blrrafk3vm80sqmlq61ag80@group.calendar.google.com&ctz=Europe/Madrid&pli=1");
+        browser.getSettings().setJavaScriptEnabled(true);
+        browser.getSettings().setBuiltInZoomControls(true);
+        browser.loadUrl("https://calendar.google.com/calendar/embed?src=v79blrrafk3vm80sqmlq61ag80%40group.calendar.google.com&ctz=Europe/Madrid");
+
         return rootView;
     }
 
