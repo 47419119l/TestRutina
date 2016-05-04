@@ -4,79 +4,61 @@ package com.example.sandra.testrutina;
  * Created by sandra on 03/05/2016.
  */
 public class Exercici {
+    private int id;
+    private String nom;
+    private String repeticions;
+    private String image;
+    private String descripcio;
+    private String maquina;
 
-    private String nomEx;
-    private String descrip;
-    private String maquinaNom;
-    private boolean isMaquina;
-    private int nRepeticions;
-    private int set;
-    private boolean realitzat;
-    private String foto;
 
     public Exercici (){}
 
-    public String getNomEx() {
-        return nomEx;
+    public int getId() {
+        return id;
     }
 
-    public void setNomEx(String nomEx) {
-        this.nomEx = nomEx;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getDescrip() {
-        return descrip;
+    public String getNom() {
+        return nom;
     }
 
-    public void setDescrip(String descrip) {
-        this.descrip = descrip;
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
-    public String getMaquinaNom() {
-        return maquinaNom;
+    public String getRepeticions() {
+        return repeticions;
     }
 
-    public void setMaquinaNom(String maquinaNom) {
-        this.maquinaNom = maquinaNom;
+    public void setRepeticions(String repeticions) {
+        this.repeticions = repeticions;
     }
 
-    public boolean isMaquina() {
-        return isMaquina;
+    public String getImage() {
+        return image;
     }
 
-    public void setIsMaquina(boolean isMaquina) {
-        this.isMaquina = isMaquina;
+    public void setImage(String image) {
+        this.image = image;
     }
 
-    public boolean isRealitzat() {
-        return realitzat;
+    public String getDescripcio() {
+        return descripcio;
     }
 
-    public void setRealitzat(boolean realitzat) {
-        this.realitzat = realitzat;
+    public void setDescripcio(String descripcio) {
+        this.descripcio = descripcio;
     }
 
-    public int getnRepeticions() {
-        return nRepeticions;
+    public String getMaquina() {
+        return maquina;
     }
 
-    public void setnRepeticions(int nRepeticions) {
-        this.nRepeticions = nRepeticions;
-    }
-
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
-    public int getSet() {
-        return set;
-    }
-
-    public void setSet(int set) {
-        this.set = set;
+    public void setMaquina(String maquina) {
+        this.maquina = maquina;
     }
 }

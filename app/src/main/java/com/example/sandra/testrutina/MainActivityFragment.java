@@ -7,10 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TabHost;
-
-
-import java.util.ArrayList;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -30,9 +26,11 @@ public class MainActivityFragment extends Fragment {
 
         tabHost= (FragmentTabHost) rootView.findViewById(android.R.id.tabhost);
         tabHost.setup(getActivity(), getFragmentManager(),android.R.id.tabcontent);
-        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("Lengüeta 1"), Tab1.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Lengüeta 2"), Tab2.class, null);
-      //  tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Lengüeta 3"), Tab3.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("Standard"), RutinesStandard.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Customiza"), RutinesPersonalitzades.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Calendario"), CalendariActivitats.class, null);
+
+        //  tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Lengüeta 3"), Tab3.class, null);
 
 
         return rootView;

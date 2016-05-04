@@ -1,24 +1,18 @@
 package com.example.sandra.testrutina;
 
-import android.content.ContentUris;
-import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import java.util.Calendar;
+
+public class RutinesPersonalitzades extends Fragment {
 
 
-public class Tab2 extends Fragment {
-
-
-    public Tab2() {
+    public RutinesPersonalitzades() {
         // Required empty public constructor
     }
 
@@ -27,7 +21,7 @@ public class Tab2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_tab2, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_personalitzades, container, false);
         WebView browser = (WebView) rootView.findViewById(R.id.webview);
         browser.getSettings().setJavaScriptEnabled(true);
         browser.getSettings().setBuiltInZoomControls(true);
