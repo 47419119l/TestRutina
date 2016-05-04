@@ -23,13 +23,12 @@ public class DetailsRutina extends AppCompatActivity {
     Firebase  infoGymRef;
     private RutinaStandard item;
     private ImageView imagetoolbar;
-    private TextView nivell;
-    private TextView temps;
-    private TextView descrip;
+    private TextView nivell, temps, descrip;
     private ListView listEx;
     private ArrayList<Integer>exercicis;
-    private ArrayList<Exercici>items;
+    private ArrayList<Exercici>items= new ArrayList<>();;
     private CollapsingToolbarLayout toolbar_layout;
+    private  ArrayListAdapterExerciciRutina itemsAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +40,6 @@ public class DetailsRutina extends AppCompatActivity {
         infoGymRef = ref.child("Exercicis");
         toolbar_layout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
         imagetoolbar = (ImageView)findViewById(R.id.image_appbar);
-        items = new ArrayList<>();
         nivell = (TextView)findViewById(R.id.nivelDetailRutina);
         temps = (TextView)findViewById(R.id.tempsRutinaDetail);
         descrip= (TextView)findViewById(R.id.descripRutinaDetail);
@@ -80,12 +78,14 @@ public class DetailsRutina extends AppCompatActivity {
         for(int i =0; i< exercicis.size();i++) {
             Query queryRef = infoGymRef.orderByChild("id").equalTo(exercicis.get(i));
 
-
             queryRef.addChildEventListener(new ChildEventListener() {
                 @Override
                 public void onChildAdded(DataSnapshot snapshot, String previousChild) {
                     Exercici a = snapshot.getValue(Exercici.class);
                     items.add(a);
+                    System.out.println(items.size()+"-------------------"+a.getNom());
+                    itemsAdapter = new ArrayListAdapterExerciciRutina(getBaseContext(), R.layout.list_exercici, items);
+                    listEx.setAdapter(itemsAdapter);
                 }
 
                 @Override
