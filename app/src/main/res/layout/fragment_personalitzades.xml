@@ -10,10 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="left|top">
-        <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/webview"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
     </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabRutinasPerso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_query_builder_indigo_a400_24dp"/>
 </FrameLayout>

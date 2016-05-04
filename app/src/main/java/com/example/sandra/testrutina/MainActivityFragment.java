@@ -26,11 +26,12 @@ public class MainActivityFragment extends Fragment {
 
         tabHost= (FragmentTabHost) rootView.findViewById(android.R.id.tabhost);
         tabHost.setup(getActivity(), getFragmentManager(),android.R.id.tabcontent);
+
+        //Creem les pestanyes
         tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("Standard"), RutinesStandard.class, null);
         tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Customiza"), RutinesPersonalitzades.class, null);
-        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("Calendario"), CalendariActivitats.class, null);
+        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Calendario"), CalendariActivitats.class, null);
 
-        //  tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("Lengüeta 3"), Tab3.class, null);
 
 
         return rootView;
