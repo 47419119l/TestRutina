@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by sandra on 03/05/2016.
  */
-public class Rutina implements Serializable{
+public class RutinaStandard implements Serializable{
 
     private String id;
     private String nom;
@@ -19,7 +19,7 @@ public class Rutina implements Serializable{
     private ArrayList<Integer> exercicis;
 
 
-    public Rutina(){}
+    public RutinaStandard(){}
 
     public String getId() {
         return id;

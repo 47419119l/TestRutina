@@ -44,9 +44,9 @@ public class RutinesStandard extends Fragment {
     }
 
     private void configList(){
-        final FirebaseListAdapter adapter = new FirebaseListAdapter<Rutina>(getActivity(), Rutina.class, R.layout.list_exercici_rutina, infoGymRef) {
+        final FirebaseListAdapter adapter = new FirebaseListAdapter<RutinaStandard>(getActivity(), RutinaStandard.class, R.layout.list_exercici_rutina, infoGymRef) {
             @Override
-            protected void populateView(View v, Rutina info, int position) {
+            protected void populateView(View v, RutinaStandard info, int position) {
 
                 TextView nom = (TextView)v.findViewById(R.id.nomRutina);
                 TextView temps = (TextView)v.findViewById(R.id.tempsRutina);
@@ -68,7 +68,7 @@ public class RutinesStandard extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent i = new Intent(getContext(), DetailsRutina.class);
-                i.putExtra("item", (Rutina) adapter.getItem(position));
+                i.putExtra("item", (RutinaStandard) adapter.getItem(position));
                 startActivity(i);
             }
         });

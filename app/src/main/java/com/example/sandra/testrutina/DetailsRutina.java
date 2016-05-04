@@ -3,13 +3,9 @@ package com.example.sandra.testrutina;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -18,7 +14,6 @@ import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.Query;
-import com.firebase.ui.FirebaseListAdapter;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -26,7 +21,7 @@ import java.util.ArrayList;
 public class DetailsRutina extends AppCompatActivity {
     Firebase ref;
     Firebase  infoGymRef;
-    private Rutina item;
+    private RutinaStandard item;
     private ImageView imagetoolbar;
     private TextView nivell;
     private TextView temps;
@@ -56,7 +51,7 @@ public class DetailsRutina extends AppCompatActivity {
          * Agafem el intent
          */
         Intent i = getIntent();
-        item = (Rutina) i.getSerializableExtra("item");
+        item = (RutinaStandard) i.getSerializableExtra("item");
         exercicis = item.getExercicis();
 
         condiguracioDetails();
