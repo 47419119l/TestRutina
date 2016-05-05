@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.arasthel.asyncjob.AsyncJob;
 import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -51,7 +52,6 @@ public class DetailsRutina extends AppCompatActivity {
         Intent i = getIntent();
         item = (RutinaStandard) i.getSerializableExtra("item");
         exercicis = item.getExercicis();
-
         condiguracioDetails();
         configuracioLlista();
     }
@@ -74,7 +74,29 @@ public class DetailsRutina extends AppCompatActivity {
 
 
     private void configuracioLlista(){
-        int menu =1;
+
+        new AsyncJob.AsyncJobBuilder<Boolean>()
+                .doInBackground(new AsyncJob.AsyncAction<Boolean>() {
+                    @Override
+                    public Boolean doAsync() {
+                        queryExercicis();
+                        return true;
+                    }
+                })
+                .doWhenFinished(new AsyncJob.AsyncResultAction() {
+                    @Override
+                    public void onResult(Object o) {
+                    }
+                }).create().start();
+
+        itemsAdapter = new ArrayListAdapterExerciciRutina(getBaseContext(), R.layout.list_exercici, items);
+        listEx.setAdapter(itemsAdapter);
+
+    }
+
+
+
+    private void queryExercicis(){
         for(int i =0; i< exercicis.size();i++) {
             Query queryRef = infoGymRef.orderByChild("id").equalTo(exercicis.get(i));
 
@@ -83,9 +105,7 @@ public class DetailsRutina extends AppCompatActivity {
                 public void onChildAdded(DataSnapshot snapshot, String previousChild) {
                     Exercici a = snapshot.getValue(Exercici.class);
                     items.add(a);
-                    System.out.println(items.size()+"-------------------"+a.getNom());
-                    itemsAdapter = new ArrayListAdapterExerciciRutina(getBaseContext(), R.layout.list_exercici, items);
-                    listEx.setAdapter(itemsAdapter);
+                    itemsAdapter.notifyDataSetChanged();
                 }
 
                 @Override
