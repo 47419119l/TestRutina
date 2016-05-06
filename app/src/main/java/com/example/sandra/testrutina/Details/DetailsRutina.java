@@ -1,4 +1,4 @@
-package com.example.sandra.testrutina;
+package com.example.sandra.testrutina.Details;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.arasthel.asyncjob.AsyncJob;
+import com.example.sandra.testrutina.Adapter.ArrayListAdapterExerciciRutina;
+import com.example.sandra.testrutina.R;
+import com.example.sandra.testrutina.javaClass.Exercici;
+import com.example.sandra.testrutina.javaClass.RutinaStandard;
 import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -29,7 +33,7 @@ public class DetailsRutina extends AppCompatActivity {
     private ArrayList<Integer>exercicis;
     private ArrayList<Exercici>items= new ArrayList<>();;
     private CollapsingToolbarLayout toolbar_layout;
-    private  ArrayListAdapterExerciciRutina itemsAdapter;
+    private ArrayListAdapterExerciciRutina itemsAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

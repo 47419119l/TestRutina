@@ -1,4 +1,4 @@
-package com.example.sandra.testrutina;
+package com.example.sandra.testrutina.javaClass;
 
 import android.content.Intent;
 

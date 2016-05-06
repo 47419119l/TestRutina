@@ -1,11 +1,11 @@
-package com.example.sandra.testrutina;
+package com.example.sandra.testrutina.javaClass;
 
 import java.util.ArrayList;
 
 /**
  * Created by 47419119l on 04/05/16.
  */
-public class RutinesCustomize {
+public class RutinaCustomize {
 
     private String nom;
     private int temps;
@@ -15,7 +15,7 @@ public class RutinesCustomize {
     private ArrayList<Integer> exercicis;
     private String uidUser;
 
-    public RutinesCustomize(){}
+    public RutinaCustomize(){}
 
     public String getNom() {
         return nom;

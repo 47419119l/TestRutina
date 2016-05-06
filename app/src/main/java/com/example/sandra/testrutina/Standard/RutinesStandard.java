@@ -1,4 +1,4 @@
-package com.example.sandra.testrutina;
+package com.example.sandra.testrutina.Standard;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.sandra.testrutina.Details.DetailsRutina;
+import com.example.sandra.testrutina.R;
+import com.example.sandra.testrutina.javaClass.RutinaStandard;
 import com.firebase.client.Firebase;
 import com.firebase.ui.FirebaseListAdapter;
 import com.squareup.picasso.Picasso;

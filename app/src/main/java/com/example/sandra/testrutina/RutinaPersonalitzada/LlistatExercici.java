@@ -1,4 +1,4 @@
-package com.example.sandra.testrutina;
+package com.example.sandra.testrutina.RutinaPersonalitzada;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,6 +15,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.sandra.testrutina.R;
+import com.example.sandra.testrutina.javaClass.Exercici;
+import com.example.sandra.testrutina.javaClass.RutinaCustomize;
 import com.firebase.client.Firebase;
 import com.firebase.ui.FirebaseListAdapter;
 import com.squareup.picasso.Picasso;
@@ -137,7 +140,7 @@ public class LlistatExercici extends AppCompatActivity {
     private void subirRutina(){
 
         RutinaCustomizada = ref.child("RutinasCustomizadas");
-        RutinesCustomize customize = new RutinesCustomize();
+        RutinaCustomize customize = new RutinaCustomize();
 
         customize.setNom(nomRutina.getText().toString());
         customize.setTemps(Integer.parseInt(tempsRutina.getText().toString()));

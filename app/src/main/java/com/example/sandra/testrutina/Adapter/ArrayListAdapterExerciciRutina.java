@@ -1,4 +1,4 @@
-package com.example.sandra.testrutina;
+package com.example.sandra.testrutina.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sandra.testrutina.javaClass.Exercici;
+import com.example.sandra.testrutina.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

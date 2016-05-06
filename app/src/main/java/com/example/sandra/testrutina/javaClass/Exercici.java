@@ -1,4 +1,4 @@
-package com.example.sandra.testrutina;
+package com.example.sandra.testrutina.javaClass;
 
 /**
  * Created by sandra on 03/05/2016.

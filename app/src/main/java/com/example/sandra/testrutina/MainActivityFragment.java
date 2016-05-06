@@ -8,6 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.example.sandra.testrutina.Calendari.CalendariActivitats;
+import com.example.sandra.testrutina.RutinaPersonalitzada.RutinesPersonalitzades;
+import com.example.sandra.testrutina.Standard.RutinesStandard;
+
 /**
  * A placeholder fragment containing a simple view.
  */

@@ -23,11 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailsRutina"
+            android:name=".Details.DetailsRutina"
             android:label="@string/title_activity_details_rutina"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LlistatExercici"
+            android:name=".RutinaPersonalitzada.LlistatExercici"
             android:label="@string/title_activity_llistat_exercici"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
