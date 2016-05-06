@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.arasthel.asyncjob.AsyncJob;
 import com.example.sandra.testrutina.Adapter.ArrayListAdapterRutines;
+import com.example.sandra.testrutina.FireBaseConfiguracio;
 import com.example.sandra.testrutina.R;
 import com.example.sandra.testrutina.javaClass.RutinaCustomize;
 import com.firebase.client.ChildEventListener;
@@ -26,9 +27,8 @@ public class RutinesPersonalitzades extends Fragment {
     private ListView  listaExercici;
     private ArrayList<RutinaCustomize> rutines;
     private ArrayListAdapterRutines adapter;
-    private Firebase ref;
     private ArrayListAdapterRutines itemsAdapter;
-    private Firebase  infoGymRef;
+    private Firebase refRutinesPersonalitzades;
     private String uidUser ="19dba67c-d8f0-4d7c-afc4-aebe236f84a4";
     public RutinesPersonalitzades() {
         // Required empty public constructor
@@ -52,10 +52,11 @@ public class RutinesPersonalitzades extends Fragment {
         });
         rutines = new ArrayList<>();
         listaExercici = (ListView)rootView.findViewById(R.id.listView2);
-        Firebase.setAndroidContext(getContext());
 
-        ref = new Firebase("https://testgimmapp.firebaseio.com/");
-        infoGymRef = ref.child("RutinasCustomizadas");
+        FireBaseConfiguracio fireBaseConfiguracio = new FireBaseConfiguracio();
+        fireBaseConfiguracio.configFirebase(getContext());
+        refRutinesPersonalitzades = fireBaseConfiguracio.getRutinesCustomizades();
+
         configurarLlista();
 
         return rootView;
@@ -83,7 +84,7 @@ public class RutinesPersonalitzades extends Fragment {
 
     private void queryExercicis(){
 
-            Query queryRef = infoGymRef.orderByChild("uidUser").equalTo(uidUser);
+            Query queryRef = refRutinesPersonalitzades.orderByChild("uidUser").equalTo(uidUser);
 
             queryRef.addChildEventListener(new ChildEventListener() {
                 @Override
