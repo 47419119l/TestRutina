@@ -7,82 +7,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:background="#de003cff"
-            android:id="@+id/relativeLayout">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:src="@drawable/abc_ic_menu_cut_mtrl_alpha"
-                android:layout_margin="30dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Principiante"
-                android:id="@+id/nivelDetailRutina"
-                android:layout_alignTop="@+id/imageView"
-                android:layout_toRightOf="@+id/imageView"
-                android:layout_toEndOf="@+id/imageView"
-                android:textColor="#fff" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView4"
-                android:src="@drawable/abc_ic_menu_cut_mtrl_alpha"
-                android:layout_below="@+id/nivelDetailRutina"
-                android:layout_alignLeft="@+id/imageView"
-                android:layout_alignStart="@+id/imageView"
-                android:layout_marginTop="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="45 min"
-                android:id="@+id/tempsRutinaDetail"
-                android:textColor="#fff"
-                android:layout_alignTop="@+id/imageView4"
-                android:layout_alignLeft="@+id/nivelDetailRutina"
-                android:layout_alignStart="@+id/nivelDetailRutina" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageView5"
-                android:layout_below="@+id/imageView4"
-                android:layout_alignLeft="@+id/imageView4"
-                android:layout_alignStart="@+id/imageView4"
-                android:src="@drawable/abc_ic_menu_cut_mtrl_alpha"
-                android:layout_marginTop="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rutina quema grasas para perder peso de manera ráp"
-                android:id="@+id/textView"
-                android:layout_alignTop="@+id/imageView5"
-                android:layout_toRightOf="@+id/imageView"
-                android:layout_toEndOf="@+id/imageView"
-                android:textColor="#fff" />
-        </RelativeLayout>
-
-        <ListView
+        <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/listExerciciDetail"
-            android:layout_below="@+id/relativeLayout"
+            android:id="@+id/nivellForm"
+            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView6"
+            android:layout_below="@+id/nivellForm"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_query_builder_indigo_a400_24dp" />
     </RelativeLayout>
 </LinearLayout>
